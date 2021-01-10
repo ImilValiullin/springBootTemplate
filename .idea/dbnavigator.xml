@@ -25,15 +25,18 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="e5b952f5-2382-47df-95f3-2157fbee0d37">
-        <schema name="information_schema" object-types="function, view, table" />
-        <schema name="pg_catalog" object-types="function, view, table" />
-        <schema name="public" object-types="index, constraint, function, view, dataset trigger, sequence, table, column" />
+        <schema name="pg_catalog" object-types="view, table, function" />
+        <schema name="public" object-types="column, view, table, function" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="e5b952f5-2382-47df-95f3-2157fbee0d37">
-      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[select * from message]]></console>
+      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[select * from message;
+select * from user_role;
+select * from usr;
+
+select u.username, ur.roles from usr u inner join user_role ur on u.id = ur.user_id;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -43,6 +46,8 @@
     <connection id="e5b952f5-2382-47df-95f3-2157fbee0d37" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="e5b952f5-2382-47df-95f3-2157fbee0d37" dataset="public.user_role" active-filter-id="" />
+    <filter-actions connection-id="e5b952f5-2382-47df-95f3-2157fbee0d37" dataset="public.usr" active-filter-id="" />
     <filter-actions connection-id="e5b952f5-2382-47df-95f3-2157fbee0d37" dataset="public.message" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
