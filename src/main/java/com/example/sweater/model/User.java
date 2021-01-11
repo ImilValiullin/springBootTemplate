@@ -60,7 +60,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return getRles();
+        return getRoles();
     }
 
     public String getPassword() {
@@ -79,13 +79,11 @@ public class User implements UserDetails {
         this.action = action;
     }
 
-    public Set<Role> getRles() {
+    public Set<Role> getRoles() {
         return roles;
     }
 
-    public void setRles(Set<Role> roles) {
+    public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
-
-
 }
