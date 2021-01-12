@@ -1,6 +1,7 @@
 <#import "parts/common.ftlh" as c>
+<#include "parts/security.ftlh">
 
 <@c.page>
-    <div> Hello!</div>
-    <a href="/main">Главная</a>
+<h5>Hello, <#if name=="unknown">guest<#else>${name}</#if>!</h5>
+    <div>This is a simple clone of Twitter</div>
 </@c.page>
